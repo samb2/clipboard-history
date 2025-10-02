@@ -4,7 +4,8 @@
   "description": "",
   "main": "dist/main.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && npm run copy:public",
+    "copy:public": "cp -r public dist",
     "start": "npm run build && electron .",
     "build:mac": "npm run build && electron-builder --mac dmg",
     "postinstall": "electron-builder install-app-deps"
