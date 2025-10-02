@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Clipboard History UI</title>
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+
+<div class="topbar">
+    <input id="q" class="search" placeholder="Search clipboard …"/>
+    <button id="clear" class="pill">Clear</button>
+</div>
+
+<div id="list">
+    <!-- Example clipboard items
+    <div class="item">
+        <div class="meta">Text · 12:31 PM</div>
+        <div class="content">This is a clipboard entry with some sample text.</div>
+    </div>
+    <div class="item">
+        <div class="meta">Text · 12:29 PM</div>
+        <div class="content">Another copied string goes here.</div>
+    </div>
+    <div class="item">
+        <div class="meta">Image · 12:27 PM</div>
+        <div class="content">(image preview would appear here)</div>
+    </div> -->
+</div>
+
+<div class="empty" style="display:none;">
+    Nothing here<br>
+    You'll see your clipboard here once <br>
+    you've copied something.
+</div>
+
+<script src="./renderer.js"></script>
+
+</body>
+</html>

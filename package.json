@@ -1,0 +1,73 @@
+{
+  "name": "clipboard-history",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && electron .",
+    "build:mac": "npm run build && electron-builder --mac dmg",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "build": {
+    "npmRebuild": true,
+    "appId": "com.example.clipboard",
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "arm64"
+          ]
+        }
+      ],
+      "category": "public.app-category.utilities",
+      "extendInfo": {
+        "LSUIElement": true
+      },
+      "electronLanguages": [
+        "en-US"
+      ],
+      "icon": "build/icons/icon.icns"
+    },
+    "dmg": {
+      "sign": false
+    },
+    "extraResources": [],
+    "directories": {
+      "buildResources": "build"
+    },
+    "files": [
+      "dist/**/*",
+      "node_modules/**/*",
+      "src/icon/**/*",
+      "package.json"
+    ],
+    "compression": "maximum",
+    "removePackageScripts": true,
+    "asar": true,
+    "asarUnpack": [
+      "**/*.node",
+      "node_modules/better-sqlite3/**"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@electron/rebuild": "^4.0.1",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^24.6.2",
+    "electron": "^38.2.0",
+    "electron-builder": "^26.0.12",
+    "node-gyp": "^11.4.2",
+    "prebuild-install": "^7.1.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.4.1",
+    "bindings": "^1.5.0",
+    "file-uri-to-path": "^2.0.0"
+  }
+}

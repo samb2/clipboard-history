@@ -1,0 +1,106 @@
+:root {
+    color-scheme: light dark;
+}
+
+body {
+    margin: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif;
+    background: transparent;
+}
+
+.topbar {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+    align-items: center;
+}
+
+.search {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(128, 128, 128, .3);
+    outline: none;
+}
+
+.pill {
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(128, 128, 128, .3);
+    background: transparent;
+    cursor: pointer;
+}
+
+#list {
+    max-height: 460px;
+    overflow-y: auto;
+}
+
+.item {
+    padding: 10px 12px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    background: rgba(0, 0, 0, .05);
+    cursor: pointer;
+    transition: background .15s ease;
+}
+
+.item:hover {
+    background: rgba(0, 0, 0, .12);
+}
+
+.meta {
+    font-size: 12px;
+    opacity: .65;
+    margin-bottom: 4px;
+}
+
+.content {
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-height: 6em;
+    overflow: hidden;
+}
+
+.empty {
+    opacity: .6;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.item.copied {
+    position: relative;
+    background: rgba(76, 175, 80, 0.15); /* subtle green tint */
+    transition: all 0.3s ease;
+}
+
+.item.copied::after {
+    content: "✔ Copied!";
+    position: absolute;
+    top: 6px;
+    right: 12px;
+    font-size: 12px;
+    color: #4caf50;
+    opacity: 0;
+    transform: translateY(-4px);
+    animation: fadeSlide 1s ease forwards;
+}
+
+@keyframes fadeSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    80% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+}
