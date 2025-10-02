@@ -1,5 +1,6 @@
 {
   "name": "clipboard-history",
+  "productName": "Clipboard History",
   "version": "1.0.0",
   "description": "",
   "main": "dist/main.js",
@@ -29,7 +30,7 @@
       "electronLanguages": [
         "en-US"
       ],
-      "icon": "build/icons/icon.icns"
+      "icon": "public/icons/icon.icns"
     },
     "dmg": {
       "sign": false
