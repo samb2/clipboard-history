@@ -42,7 +42,7 @@ function createWindow() {
     // open DevTools automatically so you can watch for errors
     //win.webContents.openDevTools({mode: 'detach'});
 
-    win.loadFile(path.join(__dirname, '../public/index.html'))
+    win.loadFile(path.join(__dirname, 'public/index.html'))
 
     // Hide dock initially (macOS only)
     if (process.platform === "darwin" && app.dock) {
