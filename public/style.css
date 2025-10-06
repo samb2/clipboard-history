@@ -13,6 +13,8 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif;
     background: transparent;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .topbar {
@@ -39,8 +41,9 @@ body {
 }
 
 #list {
-    max-height: 460px;
+    flex: 1 1 auto;
     overflow-y: auto;
+    min-height: 0;
 }
 
 .item {
