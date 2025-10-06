@@ -75,6 +75,11 @@ function createTray() {
     tray.on("click", toggle);
 
     tray.on("right-click", () => {
+        // If the popup is already visible, hide it so the menu isn't obscured
+        if (win.isVisible()) {
+            hidePopup();
+        }
+
         const menuTemplate: Electron.MenuItemConstructorOptions[] = [
             {
                 label: "Show Clipboard", click: () => {
