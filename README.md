@@ -35,7 +35,7 @@ clipboard-history/
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/clipboard-history.git
+git clone https://github.com/samb2/clipboard-history.git
 cd clipboard-history
 ```
 
